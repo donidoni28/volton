@@ -2,5 +2,50 @@
 *{
     margin: 0;
     padding: 0;
+    border: 1px solid black;
+}
+img{
+    display: none;
 }
 /*--------------- CONTAINER ---------------*/
+.container{
+    display: grid;
+    grid-template-columns: 3fr 10fr;
+}
+/*--------------- SECTION LEFT ---------------*/
+/*--------------- SIDE-BAR ---------------*/
+.side-bar{
+    background: #5E6C7E;
+    height: 100%;
+    color: #FFFEFE;
+}
+/*--------------- USER ---------------*/
+.user{
+    display: flex;
+    flex-direction: column;
+    padding: 1vw;
+    padding-bottom: 3vw;
+}
+
+.user > i{
+    position: relative;
+    font-size: 10vw;
+
+}
+/*--------------- NAV ---------------*/
+.nav ul{
+    list-style: none;
+    
+}
+.nav > ul li{
+    margin: 1vw;
+}
+.nav > ul li a{
+    text-decoration: none;
+    color: #FFFEFE;
+    margin-left: 1vw;
+}
+.social-media i{
+    margin-left: 1vw;
+}
+/*--------------- SECTION RIGHT ---------------*/
