@@ -1,4 +1,7 @@
 @media screen and (max-width:1440px) {
+    .side-bar{
+        width: 23.6vw;
+    }
     .container{
         display: grid;
         grid-template-columns: 3fr 10fr;
@@ -11,6 +14,9 @@
     }
 }
 @media screen and (max-width:1024px) {
+    .side-bar{
+        width: 23.6vw;
+    }
     .container{
         display: grid;
         grid-template-columns: 4fr 10fr;
