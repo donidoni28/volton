@@ -1,23 +1,32 @@
 /*--------------- GENERAL ---------------*/
-*{
-    margin: 0;
+body{
     padding: 0;
-    border: 1px solid black;
+    margin: 0;
 }
-img{
-    display: none;
+h2{
+    padding: 2vw;
+    padding-left: 4vw;
+}
+p:not(.content>p){
+    margin: 0 5vw;
+    padding-bottom: 3vw;
 }
 /*--------------- CONTAINER ---------------*/
 .container{
     display: grid;
     grid-template-columns: 3fr 10fr;
+    
 }
 /*--------------- SECTION LEFT ---------------*/
 /*--------------- SIDE-BAR ---------------*/
 .side-bar{
+    position: fixed;
+    overflow: hidden;
     background: #5E6C7E;
-    height: 100%;
     color: #FFFEFE;
+    width: 22.9vw;
+    height: 100vw;
+    z-index: 5;
 }
 /*--------------- USER ---------------*/
 .user{
@@ -30,22 +39,199 @@ img{
 .user > i{
     position: relative;
     font-size: 10vw;
-
+    
 }
 /*--------------- NAV ---------------*/
 .nav ul{
     list-style: none;
-    
+    margin-bottom: 4vw;
+    /* border: 1px solid black; */
 }
 .nav > ul li{
-    margin: 1vw;
+    margin:vw;
+    padding: 1vw 0;
+    padding-left: 1vw;
+}
+.nav > ul li:hover{
+    background-color: #485561;
 }
 .nav > ul li a{
     text-decoration: none;
     color: #FFFEFE;
     margin-left: 1vw;
+
 }
 .social-media i{
-    margin-left: 1vw;
+    padding-left: 1vw;
 }
 /*--------------- SECTION RIGHT ---------------*/
+/*--------------- BANNER ---------------*/
+.banner{
+    position: relative;
+    overflow: hidden;
+    background: url("/public/img/automne-conseils-photos.jpg");
+    width: 100%;
+    height: 35.4vw;
+    z-index: 1;
+}
+.banner::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: #5e6c7e6c;
+    width: 100%;
+    height: 35.4vw;
+    z-index: -2;
+}
+.description{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    padding-left: 4vw;
+    /* justify-items: center; */
+    height: 100%;
+    border: 1px solide white;
+    margin: 0.3vw;
+}
+.description  p,
+.description  h1{
+    font-size: xx-large;
+}
+.content>*{
+    color: white;
+}
+.content span{
+    text-decoration:line-through;
+}
+/*--------------- ABOUT ---------------*/
+.about{
+    padding: 4vw;
+}
+.about-img {
+    /* border: 1px solid black; */
+    width: 85%;
+    margin: 0 auto;
+    height: 20vw;
+    background: url('/public/img/gettyimages-571247259-2000.jpg');
+    background-size: 60vw;
+    background-repeat: no-repeat;
+    background-position: 0vw -20vw  ;
+}
+.about p {
+    padding: 4vw 0;
+}
+/*--------------- WHAT I DO ---------------*/
+.what-i-do{
+    padding: 4vw;
+    padding-top: 0;
+}
+.imgs{
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    width: 70rem;
+    height: 40rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 0.2vw;
+    margin-bottom: 4vw;
+}
+.img1,
+.img2,
+.img3,
+.img4,
+.img5,
+.img6{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: none;
+}
+.img1{
+    background: url('/public/img/Coffee-Shop.jpg');
+    background-size: 152%;
+}
+.img2{
+    background: url('/public/img/S8-classic-car-club-le-plaisir-de-l-ancienne-sans-les-inconvenients-185536.jpg');
+    background-size: 150%;
+}
+.img3{
+    background: url('/public/img/Monroe_PC1421_SIDE_view.webp');
+    background-size: 105%;
+}
+.img4{
+    background: url('/public/img/train-6606418__480.jpg');
+    background-size: 124%;
+}
+.img5{
+    background: url('/public/img/collection-old-woodworking-tools-607925.jpg');
+    background-size: 154%;
+}
+.img6{
+    background: url('/public/img/VMEALb.webp');
+    background-size: 150%;
+    background-position: -8vw 0vw;
+}               
+.img1::before,
+.img2::before,
+.img3::before,
+.img4::before,
+.img5::before,
+.img6::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0%;
+}
+.img1:hover::before,
+.img2:hover::before,
+.img3:hover::before,
+.img4:hover::before,
+.img5:hover::before,
+.img6:hover::before{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 32, 32, 0.769);
+    transition: background-color 500ms,height 500ms;
+}
+/*--------------- CONTACT ME ---------------*/
+.talk{
+    padding: 4vw;
+    padding-top: 0;
+}
+form{
+    display: grid;
+    grid-template-areas:
+    'inp-1 inp-2 inp-3'
+    'txt txt txt'
+    'btn . .'
+    ;
+    gap: 1vw;
+    padding-bottom: 4vw;
+}
+input:nth-of-type(1){
+    padding: 0.5vw;
+    grid-area: inp-1;
+}
+input:nth-of-type(2){
+    padding: 0.5vw;
+    grid-area: inp-2;
+}
+input:nth-of-type(3){
+    padding: 0.5vw;
+    grid-area: inp-3;
+}
+textarea{
+    padding: 0.5vw;
+    grid-area: txt;
+}
+form > button {
+    padding: 0.5vw;
+    grid-area: btn;
+    
+}
+/*--------------- FOOTER ---------------*/
+footer p{
+    text-align: center;
+}
